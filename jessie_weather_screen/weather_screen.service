@@ -1,0 +1,6 @@
+[Unit]
+Description=weather_screen
+
+[Service]
+Type=simple
+ExecStart=/home/pi/rpi_code_jessie/jessie_weather_screen/jessie_weather_screen.py

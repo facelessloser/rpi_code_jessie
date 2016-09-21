@@ -1,0 +1,14 @@
+[Unit]
+Description=Cycle weather morning
+
+[Timer]
+OnCalendar=Sun 06:05
+OnCalendar=Sun 18:50
+OnCalendar=Mon 06:05
+OnCalendar=Mon 18:50
+OnCalendar=Tue 06:05
+OnCalendar=Tue 18:50
+Unit=cycle_weather.service
+
+[Install]
+WantedBy=multi-user.target

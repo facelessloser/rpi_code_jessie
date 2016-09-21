@@ -1,0 +1,8 @@
+[Service]
+ExecStart=/home/pi/rpi_code_jessie/cycle_status/cycle_weather.py
+WorkingDirectory=/home/pi/rpi_code_jessie/cycle_status/
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

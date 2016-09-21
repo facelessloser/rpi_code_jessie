@@ -1,0 +1,6 @@
+[Unit]
+Description=TempLogger
+
+[Service]
+Type=simple
+ExecStart=/home/pi/rpi_code_jessie/jessie_outdoor_temp/outdoor_templogger.py
