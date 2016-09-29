@@ -1,0 +1,4 @@
+kool london - mplayer http://uk1-pn.webcast-server.net:8698/
+24/7 drum and bass - mplayer http://stream.247drumandbass.com:80
+Jungletrain - mplayer http://stream2.jungletrain.net:8000/
+Origin uk - mplayer http://149.255.59.162:8030/
