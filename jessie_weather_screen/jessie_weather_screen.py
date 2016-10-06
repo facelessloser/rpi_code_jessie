@@ -16,7 +16,7 @@ LED_COUNT = 8 # Number of LED pixels.
 LED_PIN = 12 # GPIO pin connected to the pixels (must support PWM!) 
 LED_FREQ_HZ = 800000 # LED signal frequency in hertz (usually 800khz)
 LED_DMA = 5 # DMA channel to use for generating signal (try 5)
-#LED_BRIGHTNESS = 255 # Set to 0 for darkest and 255 for brightest
+#LED_BRIGHTNESS = 127 # Set to 0 for darkest and 255 for brightest
 LED_BRIGHTNESS = 255 # Set to 0 for darkest and 255 for brightest
 LED_INVERT = False # True to invert the signal (when using NPN transistor level shift)
 
@@ -119,7 +119,7 @@ class basicWeather(object):
             
             while (ledNumber <= int(mappedTemp)):
                 print ledNumber
-                strip.setPixelColorRGB(ledNumber,127,0,127) # Aqua    
+                strip.setPixelColorRGB(ledNumber,0,255,255) # Aqua    
                 ledNumber = ledNumber + 1
                 strip.show()
 
@@ -130,7 +130,7 @@ class basicWeather(object):
             print "Number of led's %d " % int(mappedTemp)
             
             while (ledNumber <= int(mappedTemp)):
-                strip.setPixelColorRGB(ledNumber,127,127,0) # Yellow   
+                strip.setPixelColorRGB(ledNumber,255,255,0) # Yellow   
                 ledNumber = ledNumber + 1
                 strip.show()
 
@@ -140,9 +140,8 @@ class basicWeather(object):
             print "Number of led's %d " % int(mappedTemp)
             
             while (ledNumber < int(mappedTemp)):
-#                strip.setPixelColorRGB(ledNumber,127,255,0) # orange   
-#                strip.setPixelColorRGB(ledNumber,190,255,0) # orange   
-                strip.setPixelColorRGB(ledNumber,0,255,0) # red    
+                strip.setPixelColorRGB(ledNumber,127,255,0) # orange   
+#                strip.setPixelColorRGB(ledNumber,0,255,0) # red    
                 ledNumber = ledNumber + 1
                 strip.show()
 
