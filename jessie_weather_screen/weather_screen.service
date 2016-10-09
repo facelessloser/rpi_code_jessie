@@ -4,6 +4,6 @@ Description=weather_screen
 [Service]
 Type=simple
 
-ExecStart=/usr/bin/python /home/pi/rpi_code_jessie/jessie_weather_screen/jessie_weather_scr    een.py
+ExecStart=/usr/bin/python /home/pi/rpi_code_jessie/jessie_weather_screen/jessie_weather_screen.py
 WorkingDirectory=/home/pi/rpi_code_jessie/jessie_weather_screen/
 
