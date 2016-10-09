@@ -1,0 +1,10 @@
+[Unit]
+Description=screen_ip at start up
+
+[Timer]
+OnBootSec=1min
+OnCalendar=*:0,15,30,45
+Unit=screen_ip.service
+
+[Install]
+WantedBy=multi-user.target

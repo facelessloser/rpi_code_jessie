@@ -1,0 +1,8 @@
+[Unit]
+Description=screen_ip
+
+[Service]
+Type=simple
+#ExecStart=/home/pi/python_code/final_code/screen_ip/screen_ip.py
+ExecStart=/usr/bin/python /home/pi/python_code/final_code/screen_ip/screen_ip.py
+WorkingDirectory=/home/pi/python_code/final_code/screen_ip/
