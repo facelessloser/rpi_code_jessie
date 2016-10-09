@@ -54,7 +54,8 @@ image = Image.new('1', (width, height))
  
 # Get drawing object to draw on image.
 draw = ImageDraw.Draw(image)
-font = ImageFont.load_default()
+#font = ImageFont.load_default()
+font = ImageFont.truetype('Minecraftia-Regular.ttf', 8)
 # ---- Screen stuff ----
 
 class basicWeather(object):
