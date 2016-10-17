@@ -57,5 +57,6 @@ while True:
         call(['shutdown', '-h', 'now'], shell=False)
 
     prev_input = input
-    time.sleep(0.05)
+#    time.sleep(0.05)
+    time.sleep(5)
 
