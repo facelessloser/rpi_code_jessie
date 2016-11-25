@@ -74,7 +74,7 @@ def buttonStateChanged(pin):
             strip.setPixelColorRGB(ledNumber,255,0,0) # Red   
             strip.show()
             ledNumber = ledNumber + 1
-            time.sleep(0.5)
+            time.sleep(0.2)
 
 
         call(['shutdown', '-h', 'now'], shell=False)
