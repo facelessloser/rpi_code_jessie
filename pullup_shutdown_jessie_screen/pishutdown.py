@@ -27,9 +27,6 @@ LED_DMA = 5 # DMA channel to use for generating signal (try 5)
 LED_BRIGHTNESS = 127 # Set to 0 for darkest and 255 for brightest
 LED_INVERT = False # True to invert the signal (when using NPN transistor level shift)
 
-strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
-# Intialize the library (must be called once before other functions).
-strip.begin()
 # ---- ws2812 stuff ----
 
 GPIO.setmode(GPIO.BCM)
@@ -61,6 +58,9 @@ GPIO.setup(23, GPIO.OUT) # Set up pin 16 as an output
 
 def buttonStateChanged(pin):
 
+    strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
+        # Intialize the library (must be called once before other functions).
+    strip.begin()
     ledNumber = 0
 
     if not (GPIO.input(pin)):
@@ -70,11 +70,11 @@ def buttonStateChanged(pin):
         disp.display()
         #print"button press"
         GPIO.output(23, True) # Turn on pin 16 (LED)
-#        while (ledNumber < 8):
-#            strip.setPixelColorRGB(ledNumber,0,255,0) # Aqua    
-#            strip.show()
-#            ledNumber = ledNumber + 1
-#            time.sleep(1)
+        while (ledNumber < 8):
+            strip.setPixelColorRGB(ledNumber,0,255,0) # Aqua    
+            strip.show()
+            ledNumber = ledNumber + 1
+            time.sleep(1)
 
 
         call(['shutdown', '-h', 'now'], shell=False)
