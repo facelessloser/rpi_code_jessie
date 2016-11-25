@@ -86,20 +86,20 @@ def buttonStateChanged(pin):
 
         strip.setPixelColorRGB(0,255,0,0) # Red    
         strip.show()
-        strip.setPixelColorRGB(1,0,255,0) # Green    
-        strip.show()
-        strip.setPixelColorRGB(2,255,0,0) # Red    
-        strip.show()
-        strip.setPixelColorRGB(3,0,255,0) # Green    
-        strip.show()
-        strip.setPixelColorRGB(4,255,0,0) # Red    
-        strip.show()
-        strip.setPixelColorRGB(5,0,255,0) # Green    
-        strip.show()
-        strip.setPixelColorRGB(6,255,0,0) # Red    
-        strip.show()
-        strip.setPixelColorRGB(7,0,255,0) # Green    
-        strip.show()
+#        strip.setPixelColorRGB(1,0,255,0) # Green    
+#        strip.show()
+#        strip.setPixelColorRGB(2,255,0,0) # Red    
+#        strip.show()
+#        strip.setPixelColorRGB(3,0,255,0) # Green    
+#        strip.show()
+#        strip.setPixelColorRGB(4,255,0,0) # Red    
+#        strip.show()
+#        strip.setPixelColorRGB(5,0,255,0) # Green    
+#        strip.show()
+#        strip.setPixelColorRGB(6,255,0,0) # Red    
+#        strip.show()
+#        strip.setPixelColorRGB(7,0,255,0) # Green    
+#        strip.show()
 
         time.sleep(10) # delays for 5 seconds
  
