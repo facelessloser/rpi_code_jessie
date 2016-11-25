@@ -71,10 +71,10 @@ def buttonStateChanged(pin):
         #print"button press"
         GPIO.output(23, True) # Turn on pin 16 (LED)
         while (ledNumber < 8):
-            strip.setPixelColorRGB(ledNumber,0,255,0) # Aqua    
+            strip.setPixelColorRGB(ledNumber,255,0,0) # Red   
             strip.show()
             ledNumber = ledNumber + 1
-            time.sleep(1)
+            time.sleep(0.5)
 
 
         call(['shutdown', '-h', 'now'], shell=False)
