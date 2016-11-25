@@ -1,0 +1,10 @@
+[Service]
+ExecStart=/usr/bin/python /home/pi/rpi_code_jessie/jessie_count_weather/count_down.py
+WorkingDirectory=/home/pi/rpi_code_jessie/jessie_count_weather/
+Restart=always
+
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
