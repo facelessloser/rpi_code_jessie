@@ -94,7 +94,7 @@ class basicWeather(object):
             strip.setPixelColorRGB(0,0,0,255) # Blue    
             strip.show()
 
-        elif 0.1 < temp_c <= 10:
+        elif 0.1 <= temp_c <= 10:
         
             mappedTemp = temp_c / 1.25 
             print "Number of led's %d " % int(mappedTemp)
