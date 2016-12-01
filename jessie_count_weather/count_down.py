@@ -65,7 +65,7 @@ def buttonStateChanged(pin):
 
     if not (GPIO.input(pin)):
 
-        take = self.xmas - self.now
+        take = xmas - now
         day = take.days * 86400
         print "%r" % take.days
        
@@ -100,8 +100,8 @@ def buttonStateChanged(pin):
 GPIO.add_event_detect(17, GPIO.BOTH, callback=buttonStateChanged)
  
 while True:
-    self.xmas = datetime.datetime(2016,12,25)
-    self.now = datetime.datetime.now()
+    xmas = datetime.datetime(2016,12,25)
+    now = datetime.datetime.now()
      # sleep to reduce unnecessary CPU usage
     time.sleep(5)
                                  
