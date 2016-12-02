@@ -65,43 +65,43 @@ def buttonStateChanged(pin):
 
     if not (GPIO.input(pin)):
 
-        take = xmas - now
-        day = take.days * 86400
-        print "%r" % take.days
-       
-        draw.text((0, 0), "Days till xmas" ,font=font, fill=255)
-        draw.text((0, 15), "%r"  % take.days,font=font, fill=255)
+#        take = xmas - now
+#        day = take.days * 86400
+#        print "%r" % take.days
+#       
+#        draw.text((0, 0), "Days till xmas" ,font=font, fill=255)
+#        draw.text((0, 15), "%r"  % take.days,font=font, fill=255)
 #        draw.text((0, 15), "%sC" % temp_c, font=font, fill=255)
 #        draw.text((0, 30), "Feels like" ,font=font, fill=255)
 #        draw.text((0, 45), "%sC" % feels, font=font, fill=255)
 
         # Display image.
-        disp.image(image)
-        disp.display()
-
-        strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
-        # Intialize the library (must be called once before other functions).
-        strip.begin()
-
-        strip.setPixelColorRGB(0,255,0,0) # Red    
-        strip.setPixelColorRGB(1,0,255,0) # Green    
-        strip.setPixelColorRGB(2,255,0,0) # Red    
-        strip.setPixelColorRGB(3,0,255,0) # Green    
-        strip.setPixelColorRGB(4,255,0,0) # Red    
-        strip.setPixelColorRGB(5,0,255,0) # Green    
-        strip.setPixelColorRGB(6,255,0,0) # Red    
-        strip.setPixelColorRGB(7,0,255,0) # Green    
-        strip.show()
-
-        time.sleep(10) # delays for 5 seconds
- 
-        os.system("sudo python jessie_weather_screen.py")
+#        disp.image(image)
+#        disp.display()
+#
+#        strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
+#        # Intialize the library (must be called once before other functions).
+#        strip.begin()
+#
+#        strip.setPixelColorRGB(0,255,0,0) # Red    
+#        strip.setPixelColorRGB(1,0,255,0) # Green    
+#        strip.setPixelColorRGB(2,255,0,0) # Red    
+#        strip.setPixelColorRGB(3,0,255,0) # Green    
+#        strip.setPixelColorRGB(4,255,0,0) # Red    
+#        strip.setPixelColorRGB(5,0,255,0) # Green    
+#        strip.setPixelColorRGB(6,255,0,0) # Red    
+#        strip.setPixelColorRGB(7,0,255,0) # Green    
+#        strip.show()
+#
+#        time.sleep(10) # delays for 5 seconds
+# 
+        os.system("sudo python xmas_count.py")
 
 GPIO.add_event_detect(17, GPIO.BOTH, callback=buttonStateChanged)
  
 while True:
-    xmas = datetime.datetime(2016,12,25)
-    now = datetime.datetime.now()
+#    xmas = datetime.datetime(2016,12,25)
+#    now = datetime.datetime.now()
      # sleep to reduce unnecessary CPU usage
     time.sleep(5)
                                  
