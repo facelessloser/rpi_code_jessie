@@ -57,7 +57,7 @@ from time import strftime
 #font = ImageFont.truetype('keep.ttf', 14)
 # ---- Screen stuff ----
  
-#GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BOARD)
 #GPIO.setup(shutdownPin, GPIO.IN)
 GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
  
