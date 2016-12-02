@@ -53,19 +53,19 @@ image = Image.new('1', (width, height))
 # Get drawing object to draw on image.
 draw = ImageDraw.Draw(image)
 #font = ImageFont.load_default()
-font = ImageFont.truetype('keep.ttf', 14)
+font = ImageFont.truetype('keep.ttf', 16)
 # ---- Screen stuff ----
 
 
     
-xmas = datetime.datetime(2016,12,25)
+xmas = datetime.datetime(2016,12,26)
 now = datetime.datetime.now()
 
 take = xmas - now
 day = take.days * 86400
 print "%r" % take.days
 
-draw.text((0, 0), "Days till xmas" ,font=font, fill=255)
+draw.text((0, 0), "Sleep till xmas" ,font=font, fill=255)
 draw.text((0, 15), "%r"  % take.days,font=font, fill=255)
 
 # Display image.
