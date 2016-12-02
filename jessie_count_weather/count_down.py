@@ -11,7 +11,7 @@ import time, os
 
 GPIO.setmode(GPIO.BOARD)
 #GPIO.setup(shutdownPin, GPIO.IN)
-GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(11, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
 def buttonStateChanged(pin):
@@ -22,7 +22,7 @@ def buttonStateChanged(pin):
         #print"Shutdown"
         os.system("sudo python xmas_count.py")
 
-GPIO.add_event_detect(17, GPIO.BOTH, callback=buttonStateChanged)
+GPIO.add_event_detect(11, GPIO.BOTH, callback=buttonStateChanged)
 
 while True:
     # sleep to reduce unnecessary CPU usage
