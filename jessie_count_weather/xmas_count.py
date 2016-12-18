@@ -66,7 +66,7 @@ print "%r" % take.days
 
 draw.text((0, 0), "Sleep till xmas" ,font=font, fill=255)
 #draw.text((0, 20), "%r"  % take.days,font=font, fill=255)
-draw.text((0, 20), "%r"  % take.days,font20=font, fill=255)
+draw.text((0, 20), "%r"  % take.days,font=font20, fill=255)
 
 # Display image.
 disp.image(image)
