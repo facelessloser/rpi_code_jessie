@@ -54,7 +54,7 @@ image = Image.new('1', (width, height))
 draw = ImageDraw.Draw(image)
 #font = ImageFont.load_default()
 font = ImageFont.truetype('keep.ttf', 16)
-font20 = ImageFont.truetype('keep.ttf', 20)
+font20 = ImageFont.truetype('keep.ttf', 24)
 # ---- Screen stuff ----
 
 xmas = datetime.datetime(2016,12,26)
