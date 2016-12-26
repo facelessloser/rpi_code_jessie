@@ -51,7 +51,8 @@ image = Image.new('1', (width, height))
  
 # Get drawing object to draw on image.
 draw = ImageDraw.Draw(image)
-font = ImageFont.load_default()
+#font = ImageFont.load_default()
+font = ImageFont.truetype('keep.ttf', 16)
 
 GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(23, GPIO.OUT) # Set up pin 16 as an output
