@@ -66,7 +66,7 @@ def buttonStateChanged(pin):
 
     if not (GPIO.input(pin)):
         # Display image.
-        draw.text((25, 0),"Shutting down" ,font=font, fill=127)
+        draw.text((0, 0),"Shutting down" ,font=font, fill=127)
         disp.image(image)
         disp.display()
         #print"button press"
