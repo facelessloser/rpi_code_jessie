@@ -57,6 +57,7 @@ draw = ImageDraw.Draw(image)
 #font = ImageFont.load_default()
 #font = ImageFont.truetype('Minecraftia-Regular.ttf', 8)
 font = ImageFont.truetype('keep.ttf', 12)
+fontBig = ImageFont.truetype('keep.ttf', 24)
 # ---- Screen stuff ----
 
 class basicWeather(object):
@@ -82,10 +83,15 @@ class basicWeather(object):
         rain = parsed_json['current_observation']['precip_1hr_metric']
         f.close()
 
+#        draw.text((0, 0), "Temp" ,font=font, fill=255)
+#        draw.text((0, 15), "%sC" % temp_c, font=font, fill=255)
+#        draw.text((0, 30), "Feels like" ,font=font, fill=255)
+#        draw.text((0, 45), "%sC" % feels, font=font, fill=255)
         draw.text((0, 0), "Temp" ,font=font, fill=255)
-        draw.text((0, 15), "%sC" % temp_c, font=font, fill=255)
-        draw.text((0, 30), "Feels like" ,font=font, fill=255)
-        draw.text((0, 45), "%sC" % feels, font=font, fill=255)
+        draw.text((40, 0), "%sC" % temp_c, font=fontBig, fill=255)
+        draw.text((0, 30), "Feels" ,font=font, fill=255)
+        draw.text((40, 30), "%sC" % feels, font=fontBig, fill=255)
+
         # Display image.
         disp.image(image)
         disp.display()
