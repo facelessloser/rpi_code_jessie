@@ -75,8 +75,8 @@ class basicWeather(object):
         json_string = f.read()
         parsed_json = json.loads(json_string)
         location = parsed_json['location']['city']
-#        temp_c = parsed_json['current_observation']['temp_c']
-        temp_c = "22"
+        temp_c = parsed_json['current_observation']['temp_c']
+#        temp_c = "22"
         feels = parsed_json['current_observation']['feelslike_c']
         weather = parsed_json['current_observation']['weather']
         wind = parsed_json['current_observation']['wind_mph']
