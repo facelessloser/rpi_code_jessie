@@ -53,7 +53,7 @@ image = Image.new('1', (width, height))
 # Get drawing object to draw on image.
 draw = ImageDraw.Draw(image)
 #font = ImageFont.load_default()
-font = ImageFont.truetype('keep.ttf', 16)
+font = ImageFont.truetype('keep.ttf', 15)
 font20 = ImageFont.truetype('keep.ttf', 24)
 # ---- Screen stuff ----
 
