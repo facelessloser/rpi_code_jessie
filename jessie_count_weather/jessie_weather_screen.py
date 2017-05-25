@@ -70,7 +70,7 @@ class basicWeather(object):
         self.chesterRead()
 
     def chesterRead(self):
-        ledNumber = 0
+        ledNumber = 1 
         f = urllib2.urlopen(self.chesterWeather)
         json_string = f.read()
         parsed_json = json.loads(json_string)
