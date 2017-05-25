@@ -113,7 +113,7 @@ class basicWeather(object):
                 ledNumber = ledNumber + 1
                 strip.show()
 
-        elif 10.1 < temp_c <= 20:
+        elif 10.1 <= temp_c <= 20:
         
             convert_temp_c = temp_c - 10        
             mappedTemp = convert_temp_c / 1.25 
@@ -124,7 +124,7 @@ class basicWeather(object):
                 ledNumber = ledNumber + 1
                 strip.show()
 
-        elif 20.1 < temp_c <= 30:
+        elif 20.1 <= temp_c <= 30:
             convert_temp_c = temp_c - 20        
             mappedTemp = convert_temp_c / 1.25 
             print "Number of led's %d " % int(mappedTemp)
