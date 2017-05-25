@@ -70,7 +70,7 @@ class basicWeather(object):
         self.chesterRead()
 
     def chesterRead(self):
-        ledNumber = 1 
+        ledNumber = 0 
         f = urllib2.urlopen(self.chesterWeather)
         json_string = f.read()
         parsed_json = json.loads(json_string)
@@ -135,13 +135,12 @@ class basicWeather(object):
                 strip.show()
 
         elif 30.1 < temp_c <= 40:
-            ledNumber = 1 
             convert_temp_c = temp_c -30        
             mappedTemp = convert_temp_c / 1.25 
             print "Number of led's %d " % int(mappedTemp)
             
             while (ledNumber < int(mappedTemp)):
-                strip.setPixelColorRGB(ledNumber,255,0,0) # red    
+                strip.setPixelColorRGB(ledNumber+1,255,0,0) # red    
                 ledNumber = ledNumber + 1
                 strip.show()
 
