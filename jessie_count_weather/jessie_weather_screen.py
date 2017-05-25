@@ -135,12 +135,13 @@ class basicWeather(object):
                 strip.show()
 
         elif 30.1 < temp_c <= 40:
+            ledNumber = 1 
             convert_temp_c = temp_c -30        
             mappedTemp = convert_temp_c / 1.25 
             print "Number of led's %d " % int(mappedTemp)
             
             while (ledNumber < int(mappedTemp)):
-                strip.setPixelColorRGB(ledNumber+1,255,0,0) # red    
+                strip.setPixelColorRGB(ledNumber,255,0,0) # red    
                 ledNumber = ledNumber + 1
                 strip.show()
 
