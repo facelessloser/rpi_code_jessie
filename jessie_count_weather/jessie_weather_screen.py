@@ -134,7 +134,7 @@ class basicWeather(object):
                 ledNumber = ledNumber + 1
                 strip.show()
 
-        elif 30.1 < temp_c <= 40:
+        elif 30.1 <= temp_c <= 40:
             convert_temp_c = temp_c -30        
             mappedTemp = convert_temp_c / 1.25 
             print "Number of led's %d " % int(mappedTemp)
