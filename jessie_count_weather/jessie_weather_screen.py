@@ -107,8 +107,6 @@ class basicWeather(object):
             print "Number of led's %d " % int(mappedTemp)
             
             while (ledNumber <= int(mappedTemp)):
-                print ledNumber
-                print mappedTemp
                 strip.setPixelColorRGB(ledNumber,0,255,255) # Aqua    
                 ledNumber = ledNumber + 1
                 strip.show()
@@ -140,7 +138,7 @@ class basicWeather(object):
             print "Number of led's %d " % int(mappedTemp)
             
             while (ledNumber <= int(mappedTemp)):
-                strip.setPixelColorRGB(ledNumber+1,255,0,0) # red    
+                strip.setPixelColorRGB(ledNumber,255,0,0) # red    
                 ledNumber = ledNumber + 1
                 strip.show()
 
