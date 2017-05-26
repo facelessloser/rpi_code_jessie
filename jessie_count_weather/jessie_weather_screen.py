@@ -129,7 +129,7 @@ class basicWeather(object):
             mappedTemp = convert_temp_c / 1.25 
             print "Number of led's %d " % int(mappedTemp)
             
-            while (ledNumber < int(mappedTemp)):
+            while (ledNumber <= int(mappedTemp)):
                 strip.setPixelColorRGB(ledNumber,255,191,0) # orange   
                 ledNumber = ledNumber + 1
                 strip.show()
@@ -139,7 +139,7 @@ class basicWeather(object):
             mappedTemp = convert_temp_c / 1.25 
             print "Number of led's %d " % int(mappedTemp)
             
-            while (ledNumber < int(mappedTemp)):
+            while (ledNumber <= int(mappedTemp)):
                 strip.setPixelColorRGB(ledNumber+1,255,0,0) # red    
                 ledNumber = ledNumber + 1
                 strip.show()
