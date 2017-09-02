@@ -1,6 +1,6 @@
 [Service]
-ExecStart=/usr/bin/python /home/pi/rpi_code_jessie/pullup_shutdown_jessie_pi/pishutdown.py
-WorkingDirectory=/home/pi/rpi_code_jessie/pullup_shutdown_jessie_pi/
+ExecStart=/usr/bin/python /home/pi/rpi_code_jessie/snow_shutdown/pishutdown.py
+WorkingDirectory=/home/pi/rpi_code_jessie/snow_shutdown/
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
