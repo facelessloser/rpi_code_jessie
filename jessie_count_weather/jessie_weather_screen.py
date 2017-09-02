@@ -70,12 +70,13 @@ class basicWeather(object):
         self.chesterRead()
 
     def chesterRead(self):
-        ledNumber = 0
+        ledNumber = 0 
         f = urllib2.urlopen(self.chesterWeather)
         json_string = f.read()
         parsed_json = json.loads(json_string)
         location = parsed_json['location']['city']
         temp_c = parsed_json['current_observation']['temp_c']
+#        temp_c = "22"
         feels = parsed_json['current_observation']['feelslike_c']
         weather = parsed_json['current_observation']['weather']
         wind = parsed_json['current_observation']['wind_mph']
@@ -106,12 +107,11 @@ class basicWeather(object):
             print "Number of led's %d " % int(mappedTemp)
             
             while (ledNumber <= int(mappedTemp)):
-                print ledNumber
                 strip.setPixelColorRGB(ledNumber,0,255,255) # Aqua    
                 ledNumber = ledNumber + 1
                 strip.show()
 
-        elif 10.1 < temp_c <= 20:
+        elif 10.1 <= temp_c <= 20:
         
             convert_temp_c = temp_c - 10        
             mappedTemp = convert_temp_c / 1.25 
@@ -122,14 +122,13 @@ class basicWeather(object):
                 ledNumber = ledNumber + 1
                 strip.show()
 
-        elif 20.1 < temp_c <= 30:
+        elif 20.1 <= temp_c <= 30:
             convert_temp_c = temp_c - 20        
             mappedTemp = convert_temp_c / 1.25 
             print "Number of led's %d " % int(mappedTemp)
             
-            while (ledNumber < int(mappedTemp)):
-                strip.setPixelColorRGB(ledNumber,127,255,0) # orange   
-#                strip.setPixelColorRGB(ledNumber,0,255,0) # red    
+            while (ledNumber <= int(mappedTemp)):
+                strip.setPixelColorRGB(ledNumber,255,191,0) # orange   
                 ledNumber = ledNumber + 1
                 strip.show()
 
@@ -138,8 +137,8 @@ class basicWeather(object):
             mappedTemp = convert_temp_c / 1.25 
             print "Number of led's %d " % int(mappedTemp)
             
-            while (ledNumber < int(mappedTemp)):
-                strip.setPixelColorRGB(ledNumber,0,255,0) # red    
+            while (ledNumber <= int(mappedTemp)):
+                strip.setPixelColorRGB(ledNumber,255,0,0) # red    
                 ledNumber = ledNumber + 1
                 strip.show()
 
