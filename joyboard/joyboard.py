@@ -64,7 +64,7 @@ while True:
 #    device.emit(uinput.KEY_LEFTCTRL, 1) # Press Left Ctrl key
 #    device.emit(uinput.KEY_BACKSPACE, 1) # Press Left Ctrl key
 #    call(["cd", "~/", "-h", "now" ])
-    call(["exit"])
+    call(["exit&"])
 #    call(['ls'], shell=False)
 #    call(['ls'], shell=True)
 #    device.emit(uinput.KEY_P, 1) # Press Left Ctrl key
