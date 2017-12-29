@@ -25,6 +25,7 @@ GPIO.setup(19, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(14, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(15, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(20, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 events = (uinput.KEY_UP, uinput.KEY_DOWN, uinput.KEY_LEFT, uinput.KEY_RIGHT, uinput.KEY_ENTER, uinput.KEY_BACKSPACE, uinput.KEY_LEFTCTRL, uinput.KEY_C, uinput.KEY_E, uinput.KEY_X, uinput.KEY_I, uinput.KEY_T)
 
@@ -66,19 +67,19 @@ while True:
     device.emit(uinput.KEY_LEFTCTRL, 0) # Press Left Ctrl key
     device.emit(uinput.KEY_C, 0) # Press C key
 
-  if (not y) and (not GPIO.input(20)):  # X button pressed
+  if (not y) and (not GPIO.input(18)): # Y button pressed
     y = True
-    device.emit(uinput.KEY_E, 1) # Press Left Ctrl key
-    device.emit(uinput.KEY_X, 1) # Press  C key
-    device.emit(uinput.KEY_I, 1) # Press  C key
-    device.emit(uinput.KEY_T, 1) # Press  C key
+    device.emit(uinput.KEY_E, 1) # Press E key
+    device.emit(uinput.KEY_X, 1) # Press X key
+    device.emit(uinput.KEY_I, 1) # Press I key
+    device.emit(uinput.KEY_T, 1) # Press T key
 
-  if y and GPIO.input(20):  # X button released
+  if y and GPIO.input(18): # Y button released
     y = False
-    device.emit(uinput.KEY_E, 0) # Press Left Ctrl key
-    device.emit(uinput.KEY_X, 0) # Press  C key
-    device.emit(uinput.KEY_I, 0) # Press  C key
-    device.emit(uinput.KEY_T, 0) # Press  C key
+    device.emit(uinput.KEY_E, 0) # Press E key
+    device.emit(uinput.KEY_X, 0) # Press X key
+    device.emit(uinput.KEY_I, 0) # Press I key
+    device.emit(uinput.KEY_T, 0) # Press T key
 
   if (not up) and (not GPIO.input(16)):  # Up button pressed
     up = True
