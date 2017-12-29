@@ -30,7 +30,7 @@ events = (uinput.KEY_UP, uinput.KEY_DOWN, uinput.KEY_LEFT, uinput.KEY_RIGHT, uin
 
 device = uinput.Device(events)
 
-fire = False
+a = False
 b = False
 x= False
 up = False
@@ -39,43 +39,31 @@ left = False
 right = False
 
 while True:
-  if (not fire) and (not GPIO.input(14)):  # Fire button pressed
-    fire = True
-#    device.emit(uinput.KEY_LEFTCTRL, 1) # Press Left Ctrl key
-    device.emit(uinput.KEY_ENTER, 1) # Press Left Ctrl key
+  if (not a) and (not GPIO.input(14)):  # A button pressed
+    a = True
+    device.emit(uinput.KEY_ENTER, 1) # Press ENTER key
 
-  if fire and GPIO.input(14):  # Fire button released
-    fire = False
-#    device.emit(uinput.KEY_LEFTCTRL, 0) # Release Left Ctrl key
-    device.emit(uinput.KEY_ENTER, 0) # Release Left Ctrl key
+  if a and GPIO.input(14):  # A button released
+    a = False
+    device.emit(uinput.KEY_ENTER, 0) # Release ENTER key
 
   if (not b) and (not GPIO.input(15)):  # Fire button pressed
     b = True
-#    device.emit(uinput.KEY_LEFTCTRL, 1) # Press Left Ctrl key
-    device.emit(uinput.KEY_BACKSPACE, 1) # Press Left Ctrl key
+    device.emit(uinput.KEY_BACKSPACE, 1) # Press BACKSPACE key
 
-  if b and GPIO.input(15):  # Fire button released
+  if b and GPIO.input(15):  # B button released
     b = False
-#    device.emit(uinput.KEY_LEFTCTRL, 0) # Release Left Ctrl key
-    device.emit(uinput.KEY_BACKSPACE, 0) # Release Left Ctrl key
+    device.emit(uinput.KEY_BACKSPACE, 0) # Release BACKSPACE key
     
-  if (not x) and (not GPIO.input(20)):  # Fire button pressed
+  if (not x) and (not GPIO.input(20)):  # X button pressed
     x = True
-#    device.emit(uinput.KEY_LEFTCTRL, 1) # Press Left Ctrl key
-#    device.emit(uinput.KEY_BACKSPACE, 1) # Press Left Ctrl key
-#    call(["cd", "~/", "-h", "now" ])
-#    call(["exit"])
-#    call(['ls'], shell=False)
-#    call(['ls'], shell=True)
     device.emit(uinput.KEY_LEFTCTRL, 1) # Press Left Ctrl key
-    device.emit(uinput.KEY_C, 1) # Press Left Ctrl key
+    device.emit(uinput.KEY_C, 1) # Press  C key
 
-  if x and GPIO.input(20):  # Fire button released
+  if x and GPIO.input(20):  # X button released
     x = False
-#    device.emit(uinput.KEY_LEFTCTRL, 0) # Release Left Ctrl key
-#    device.emit(uinput.KEY_BACKSPACE, 0) # Release Left Ctrl key
-    device.emit(uinput.KEY_C, 0) # Press Left Ctrl key
     device.emit(uinput.KEY_LEFTCTRL, 0) # Press Left Ctrl key
+    device.emit(uinput.KEY_C, 0) # Press C key
 
   if (not up) and (not GPIO.input(16)):  # Up button pressed
     up = True
