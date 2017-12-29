@@ -67,15 +67,15 @@ while True:
 #    call(["exit"])
 #    call(['ls'], shell=False)
 #    call(['ls'], shell=True)
-#    device.emit(uinput.KEY_P, 1) # Press Left Ctrl key
-#    device.emit(uinput.KEY_Y, 1) # Press Left Ctrl key
+    device.emit(uinput.KEY_LEFTCTRL, 1) # Press Left Ctrl key
+    device.emit(uinput.KEY_C, 1) # Press Left Ctrl key
 
   if x and GPIO.input(20):  # Fire button released
     b = False
 #    device.emit(uinput.KEY_LEFTCTRL, 0) # Release Left Ctrl key
 #    device.emit(uinput.KEY_BACKSPACE, 0) # Release Left Ctrl key
-#    device.emit(uinput.KEY_P, 0) # Press Left Ctrl key
-#    device.emit(uinput.KEY_Y, 0) # Press Left Ctrl key
+    device.emit(uinput.KEY_LEFTCTRL, 0) # Press Left Ctrl key
+    device.emit(uinput.KEY_C, 0) # Press Left Ctrl key
 
   if (not up) and (not GPIO.input(16)):  # Up button pressed
     up = True
