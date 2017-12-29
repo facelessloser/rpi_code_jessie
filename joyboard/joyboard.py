@@ -71,7 +71,7 @@ while True:
     device.emit(uinput.KEY_C, 1) # Press Left Ctrl key
 
   if x and GPIO.input(20):  # Fire button released
-    b = False
+    x = False
 #    device.emit(uinput.KEY_LEFTCTRL, 0) # Release Left Ctrl key
 #    device.emit(uinput.KEY_BACKSPACE, 0) # Release Left Ctrl key
     device.emit(uinput.KEY_C, 0) # Press Left Ctrl key
