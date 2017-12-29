@@ -26,7 +26,7 @@ GPIO.setup(14, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(15, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(20, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-events = (uinput.KEY_UP, uinput.KEY_DOWN, uinput.KEY_LEFT, uinput.KEY_RIGHT, uinput.KEY_ENTER, uinput.KEY_BACKSPACE, uinput.KEY_P, uinput.KEY_Y)
+events = (uinput.KEY_UP, uinput.KEY_DOWN, uinput.KEY_LEFT, uinput.KEY_RIGHT, uinput.KEY_ENTER, uinput.KEY_BACKSPACE, uinput.KEY_P, uinput.KEY_Y, uinput.KEY_LEFTCTRL, uinput.KEY_C)
 
 device = uinput.Device(events)
 
