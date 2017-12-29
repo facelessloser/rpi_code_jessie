@@ -74,7 +74,7 @@ while True:
     b = False
 #    device.emit(uinput.KEY_LEFTCTRL, 0) # Release Left Ctrl key
 #    device.emit(uinput.KEY_BACKSPACE, 0) # Release Left Ctrl key
-    device.emit(uinput.KEY_LEFTCTRL, 0) # Press Left Ctrl key
+#    device.emit(uinput.KEY_LEFTCTRL, 0) # Press Left Ctrl key
     device.emit(uinput.KEY_C, 0) # Press Left Ctrl key
 
   if (not up) and (not GPIO.input(16)):  # Up button pressed
