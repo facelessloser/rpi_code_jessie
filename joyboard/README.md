@@ -1,6 +1,8 @@
 # joyboard
 quick and dirty way of mapping key presses to GPIO buttons on raspberry pi
 
+Video of it in action - https://www.youtube.com/watch?v=kEpxIP5WVKY
+
 To install you will first need to install PIP then install uinput
 1. sudo apt-get install python-pip python-dev build-essential 
 2. pip install python-uinput
