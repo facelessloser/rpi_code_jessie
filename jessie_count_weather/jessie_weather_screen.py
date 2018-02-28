@@ -98,8 +98,16 @@ class basicWeather(object):
         disp.display()
 
         if temp_c < 0:
-            strip.setPixelColorRGB(0,0,0,255) # Blue    
-            strip.show()
+            positiveTemp = abs(temp_c)
+            mappedTemp = positiveTemp / 1.25 
+            print "Number of led's %d " % int(mappedTemp)
+            
+            while (ledNumber <= int(mappedTemp)):
+                strip.setPixelColorRGB(ledNumber,0,0,255) # Blue    
+                ledNumber = ledNumber + 1
+                strip.show()
+#            strip.setPixelColorRGB(0,0,0,255) # Blue    
+#            strip.show()
 
         elif 0.1 <= temp_c <= 10:
         
