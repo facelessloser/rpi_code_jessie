@@ -99,6 +99,7 @@ class basicWeather(object):
 
         if temp_c < 0:
             positiveTemp = abs(temp_c)
+            print positiveTemp
             mappedTemp = positiveTemp / 1.25 
             print "Number of led's %d " % int(mappedTemp)
             
