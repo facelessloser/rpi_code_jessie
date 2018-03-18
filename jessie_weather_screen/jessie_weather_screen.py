@@ -104,8 +104,8 @@ class basicWeather(object):
 
 #        draw.text((0, 0),"Weather in %s" % location,  font=font, fill=255)
         draw.text((0, 0), "%s" % weather, font=fontBig, fill=255)
-        draw.text((0, 10), "Temp" ,font=font, fill=255)
-        draw.text((30, 10), "%sC" % temp_c, font=fontBig, fill=255)
+        draw.text((0, 15), "Temp" ,font=font, fill=255)
+        draw.text((30, 15), "%sC" % temp_c, font=fontBig, fill=255)
         draw.text((0, 30), "Feels" ,font=font, fill=255)
         draw.text((30, 30), "%sC" % feels, font=fontBig, fill=255)
 #        draw.text((0, 10), "Temp - %sC" % temp_c, font=font, fill=255)
