@@ -112,7 +112,7 @@ class basicWeather(object):
 #        draw.text((0, 20), "Feels like - %sC" % feels, font=font, fill=255)
 #        draw.text((0, 30), "Inside temp - %0.1fC" % sensor.read_temperature(), font=font, fill=255)
 #        draw.text((0, 40), "wind - %s Mph %s" % (wind,wind_dir), font=font, fill=255)
-        draw.text((0, 50), "Rain this hour -%sCM" % (rain), font=font, fill=255)
+        draw.text((0, 50), "Rain this hour %sCM" % (rain), font=fontBig, fill=255)
         # Display image.
         disp.image(image)
         disp.display()
