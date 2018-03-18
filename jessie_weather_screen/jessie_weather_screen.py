@@ -54,8 +54,12 @@ image = Image.new('1', (width, height))
  
 # Get drawing object to draw on image.
 draw = ImageDraw.Draw(image)
-font = ImageFont.load_default()
+#font = ImageFont.load_default()
 #font = ImageFont.truetype('Minecraftia-Regular.ttf', 8)
+#font = ImageFont.truetype('keep.ttf', 12)
+#fontBig = ImageFont.truetype('keep.ttf', 26)
+font = ImageFont.truetype('keep.ttf', 6)
+fontBig = ImageFont.truetype('keep.ttf', 13)
 # ---- Screen stuff ----
 
 class basicWeather(object):
@@ -100,10 +104,14 @@ class basicWeather(object):
 
 #        draw.text((0, 0),"Weather in %s" % location,  font=font, fill=255)
         draw.text((0, 0), "%s" % weather, font=font, fill=255)
-        draw.text((0, 10), "Temp - %sC" % temp_c, font=font, fill=255)
-        draw.text((0, 20), "Feels like - %sC" % feels, font=font, fill=255)
-        draw.text((0, 30), "Inside temp - %0.1fC" % sensor.read_temperature(), font=font, fill=255)
-        draw.text((0, 40), "wind - %s Mph %s" % (wind,wind_dir), font=font, fill=255)
+        draw.text((0, 0), "Temp" ,font=font, fill=255)
+        draw.text((40, 0), "%sC" % temp_c, font=fontBig, fill=255)
+        draw.text((0, 30), "Feels" ,font=font, fill=255)
+        draw.text((40, 30), "%sC" % feels, font=fontBig, fill=255)
+#        draw.text((0, 10), "Temp - %sC" % temp_c, font=font, fill=255)
+#        draw.text((0, 20), "Feels like - %sC" % feels, font=font, fill=255)
+#        draw.text((0, 30), "Inside temp - %0.1fC" % sensor.read_temperature(), font=font, fill=255)
+#        draw.text((0, 40), "wind - %s Mph %s" % (wind,wind_dir), font=font, fill=255)
         draw.text((0, 50), "Rain this hour -%sCM" % (rain), font=font, fill=255)
         # Display image.
         disp.image(image)
